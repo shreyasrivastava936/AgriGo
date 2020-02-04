@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+        <FrameLayout
+            android:id="@+id/dynamic_fragment_frame_layout"
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:layout_alignParentBottom="true"
+            android:elevation="10dp"
+            >
+
+            <TextView
+                android:id="@+id/b1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Dashboard"
+                android:textSize="14dp"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:background="@android:color/black"
+                android:textColor="@android:color/background_light"
+                android:textAlignment="center"
+                android:layout_marginBottom="3dp"
+                />
+
+            <TextView
+                android:id="@+id/b2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Data"
+                android:textAllCaps="false"
+                android:textSize="14dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:textColor="@android:color/background_light"
+                android:textAlignment="center"
+                android:layout_marginBottom="3dp"/>
+
+            <TextView
+                android:id="@+id/b3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Government Schemes"
+                android:textAllCaps="false"
+                android:textSize="14dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:textColor="@android:color/background_light"
+                android:textAlignment="center"
+                android:layout_marginBottom="3dp"/>
+
+        </LinearLayout>
+
+</RelativeLayout>
