@@ -20,13 +20,14 @@ public  class DashboardFragment extends Fragment {
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
     private ArrayList<ImageModel> imageModelArrayList;
+    View retView;
 
     private int[] myImageList = new int[]{R.drawable.iron, R.drawable.ironman,
             R.drawable.ironman2,R.drawable.prey
             ,R.drawable.tiger2,R.drawable.wall2};
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View retView = inflater.inflate(R.layout.dashboard, container, false);
+        retView = inflater.inflate(R.layout.dashboard, container, false);
         imageModelArrayList = new ArrayList<>();
         imageModelArrayList = populateList();
 
@@ -48,11 +49,11 @@ public  class DashboardFragment extends Fragment {
     }
     private void init() {
 
-        mPager = (ViewPager) findViewById(R.id.pager);
-        mPager.setAdapter(new SlidingImage_Adapter(DashboardFragment.this,imageModelArrayList));
+        mPager = (ViewPager) retView.findViewById(R.id.pager);
+        mPager.setAdapter(new SlidingImage_Adapter(getActivity(),imageModelArrayList));
 
         CirclePageIndicator indicator = (CirclePageIndicator)
-                findViewById(R.id.indicator);
+                retView.findViewById(R.id.indicator);
 
         indicator.setViewPager(mPager);
 
